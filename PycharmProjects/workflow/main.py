@@ -20,6 +20,12 @@ class Functions:
         except Exception as e:
             print("Error in read method:", e)
 
+    def date(self, param):
+        try:
+            print(f"date called with parameter: {param}")
+            # Add your read method logic here
+        except Exception as e:
+            print("Error in date method:", e)
     # ... Define other methods ...
 
 
