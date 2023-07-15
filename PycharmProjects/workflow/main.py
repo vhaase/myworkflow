@@ -26,8 +26,16 @@ class Functions:
             # Add your read method logic here
         except Exception as e:
             print("Error in date method:", e)
-    # ... Define other methods ...
 
+    def clean(self, param):
+        try:
+            print(f"clean called with parameter: {param}")
+            # Add your read method logic here
+        except Exception as e:
+            print("Error in clean method:", e)
+
+
+# this is the main-programm
 
 if __name__ == "__main__":
     workflow_dict = {
@@ -42,11 +50,12 @@ if __name__ == "__main__":
     functions = Functions()
 
     # Call methods dynamically based on the dictionary
-    try:
-        for method_name, param in workflow_dict.items():
+
+    for method_name, param in workflow_dict.items():
+        try:
             method = getattr(functions, method_name)
             method(param)
-    except Exception as e:
-        print("Oops, something went wrong:", e)
-    finally:
-        print("We have finished the work")
+        except Exception as e:
+            print("Oops, something went wrong:", e)
+
+    print("We have finished the work")
