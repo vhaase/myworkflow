@@ -34,8 +34,14 @@ class Functions:
         except Exception as e:
             print("Error in clean method:", e)
 
+    def sum(self, param):
+        try:
+            print(f"sum called with parameter: {param}")
+            # Add your read method logic here
+        except Exception as e:
+            print("Error in sum method:", e)
 
-# this is the main-programm
+        # this is the main-programm
 
 if __name__ == "__main__":
     workflow_dict = {
