@@ -48,3 +48,5 @@ if __name__ == "__main__":
             method(param)
     except Exception as e:
         print("Oops, something went wrong:", e)
+    finally:
+        print("We have finished the work")
